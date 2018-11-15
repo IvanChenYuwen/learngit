@@ -4,5 +4,5 @@ Git has a mutable index called stage.
 Git tracks changes.
 My stupid boss still prefers SVN.
 Creating a new branch is quick AND simple.
-for master 12
+for master 13
 

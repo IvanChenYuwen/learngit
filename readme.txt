@@ -5,4 +5,4 @@ Git tracks changes.
 My stupid boss still prefers SVN.
 Creating a new branch is quick AND simple.
 updated
-for dev
+for dev merged

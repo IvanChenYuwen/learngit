@@ -1,11 +1,15 @@
 pipeline{
     agent any
+    parameters{
+         string(name: 'Greeting', defaultValue: 'Hello', description:'How old are you?')   
+    }
     environment{
         jobName = "wakaka"
     }
     stages {
         stage("api_autotest"){
             steps{
+                echo "${params.Greeting}"
                 bat 'python messages.py'
             }
         }

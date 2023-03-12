@@ -3,8 +3,8 @@ pipeline{
     parameters{
          string(name: 'Greeting', defaultValue: 'Hello', description:'How old are you?')   
          text(name: 'Greeting2', defaultValue: 'Hello Again!', description:'How old old are you?')  
-         boooleanParam(name: 'Greeting3', defaultValue: true, description:'How old are you too?')  
-         choice(name: 'Greeting4', defaultValue: ['Hello Again!','1','2'], description:'How are you?')  
+         booleanParam(name: 'Greeting3', defaultValue: true, description:'How old are you too?')  
+         choice(name: 'Greeting4', choices: ['Hello Again!','1','2'], description:'How are you?')  
          password(name: 'Greeting5', defaultValue: 'secret', description:'secret')  
     }
     environment{

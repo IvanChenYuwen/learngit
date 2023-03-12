@@ -2,6 +2,10 @@ pipeline{
     agent any
     parameters{
          string(name: 'Greeting', defaultValue: 'Hello', description:'How old are you?')   
+         text(name: 'Greeting2', defaultValue: 'Hello Again!', description:'How old old are you?')  
+         boooleanParam(name: 'Greeting3', defaultValue: true, description:'How old are you too?')  
+         choice(name: 'Greeting4', defaultValue: ['Hello Again!','1','2'], description:'How are you?')  
+         password(name: 'Greeting5', defaultValue: 'secret', description:'secret')  
     }
     environment{
         jobName = "wakaka"
@@ -9,7 +13,12 @@ pipeline{
     stages {
         stage("api_autotest"){
             steps{
+                echo "Parameters: "
                 echo "${params.Greeting}"
+                echo "${params.Greeting2}"
+                echo "${params.Greeting3}"
+                echo "${params.Greeting4}"
+                echo "${params.Greeting5}"
                 bat 'python messages.py'
             }
         }

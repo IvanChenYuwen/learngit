@@ -12,7 +12,7 @@ pipeline{
           always {
             emailext body: '''<html>
             <h1>Test Mail Yuwen</h1>
-            </html>''', subject: "job ${env.JOB_BASE_NAME}, result: ${currentBuild.currentResult}" to: '447330947@qq.com'
+            </html>''', subject: "job ${env.JOB_BASE_NAME}, result: ${currentBuild.currentResult}", to: '447330947@qq.com'
           }
     }
 }

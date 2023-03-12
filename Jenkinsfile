@@ -8,6 +8,7 @@ pipeline{
         }
     }
         post {
+          writeFile file: 'result.txt', text: "Test: job ${env.JOB_BASE_NAME}, result: ${currentBuild.currentResult}"
           always {
             emailext body: '''<html>
             <h1>Test Mail Yuwen</h1>
